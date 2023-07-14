@@ -10,14 +10,13 @@
 int main(void)
 {
 	int n;
+	int	d;
+	int	sign;
 	char	lDigi[1];
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int	d;
-	int	sign;
-
 	sign = 1;
 	d = n;
 	if (n < 0)
