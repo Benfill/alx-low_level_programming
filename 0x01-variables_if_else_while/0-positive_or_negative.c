@@ -3,6 +3,10 @@
 /* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there */
+/**
+ * main - programme to know if n is postive or not
+ * Return: 0
+ */
 int main(void)
 {
 	int n;

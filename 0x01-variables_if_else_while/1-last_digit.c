@@ -10,11 +10,11 @@
 int main(void)
 {
 	int n;
+	char	lDigi[1];
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	char	lDigi[1];
 	int	d;
 	int	sign;
 
