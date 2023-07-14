@@ -14,7 +14,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	char	*lDigi;
+	char	lDigi[1];
 	int	d;
 	int	sign;
 
