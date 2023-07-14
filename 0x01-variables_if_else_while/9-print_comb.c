@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - priting all possible combinations of single-digit 
+ * main - priting all possible combinations of single-digit
  * Return: 0
  */
 
