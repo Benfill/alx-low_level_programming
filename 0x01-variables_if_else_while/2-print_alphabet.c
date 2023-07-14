@@ -7,7 +7,7 @@
 
 int	main(void)
 {
-	char alpha;
+	char	alpha;
 
 	alpha = 97;
 	while (alpha <= 122)
