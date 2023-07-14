@@ -28,7 +28,7 @@ int main(void)
 	while (d > 10)
 		d = d % 10;
 	d *= sign;
-	lDigit[0] = d;
+	lDigi[0] = d;
 	if (d > 5)
 		printf("Last digit of %d is %d and is greater than 5\n", n, lDigi[0]);
 	else if (d == 0)
