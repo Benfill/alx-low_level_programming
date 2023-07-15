@@ -11,7 +11,7 @@ int	main(void)
 	int	digit2;
 
 	digit	= 48;
-	digit2	= 48;
+	digit2	= 49;
 	while (digit2 != 58)
 	{
 		while (digit != '9')
