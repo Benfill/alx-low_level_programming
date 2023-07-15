@@ -5,39 +5,24 @@
  * Return: 0
  */
 
-int	main(void)
+int main(void)
 {
-	int	digit;
-	int	digit2;
+	int i, j;
 
-	digit	= '0';
-	digit2	= '1';
-	while (digit2 != ':')
+	for (i = 0; i < 9; i++)
 	{
-		while (digit != '9')
+		for (j = i + 1; j <= 9; j++)
 		{
-			putchar(digit);
-			putchar(digit2);
-			if (digit != '8')
+			if (j != i)
 			{
+				putchar(i + '0');
+				putchar(j + '0');
+				if (i == 8 && j == 9)
+					continue;
 				putchar(',');
 				putchar(' ');
 			}
-			if (digit2 == '9')
-			{
-				digit++;
-				digit2 = '1';
-			}
-			if (digit > digit2 || digit == digit2)
-			{
-				while (digit > digit2 || digit == digit2)
-					digit2++;
-			}
-			else
-				digit2++;
 		}
-		digit2++;
-
 	}
 	putchar('\n');
 	return (0);
