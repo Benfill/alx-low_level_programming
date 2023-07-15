@@ -10,9 +10,9 @@ int	main(void)
 	int	digit;
 	int	digit2;
 
-	digit	= 48;
-	digit2	= 49;
-	while (digit2 != 58)
+	digit	= '0';
+	digit2	= '1';
+	while (digit2 != ':')
 	{
 		while (digit != '9')
 		{
