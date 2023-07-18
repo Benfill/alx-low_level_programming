@@ -23,7 +23,8 @@ void	times_table(void)
 			}
 			else
 				_putchar(48 + result);
-			write(1, ", ", 2);
+			if (b < 9)
+				write(1, ", ", 2);
 			b++;
 		}
 		b = 0;
