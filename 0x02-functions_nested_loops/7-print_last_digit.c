@@ -13,17 +13,17 @@ int	print_last_digit(int n)
 
 	d = n;
 	if (d == -2147483648)
-	{
-		l = 1;
 		d++;
-	}
 	if (n < 0)
 		d *= -1;
 	while (d > 10)
 		d %= 10;
-	l += 48 + d;
+	l = 48 + d;
 	if (n == -2147483648)
+	{
 		d++;
+		l++;
+	}
 	write(1, &l, 1);
 	return (d);
 }
