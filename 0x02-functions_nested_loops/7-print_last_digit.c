@@ -9,12 +9,13 @@
 int	print_last_digit(int n)
 {
 	int	d;
-
+	char	l;
 	d = n;
 	if (n < 0)
 		d *= -1;
 	while (d > 10)
 		d %= 10;
-	write(1, 48 + d, 1)
+	l = 48 + d;
+	write(1, &l, 1)
 	return (d);
 }
