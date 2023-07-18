@@ -26,7 +26,7 @@ void	times_table(void)
 			if (b < 9)
 				write(1, ", ", 2);
 			else if (result < 10)
-				write(1, ",  ", 3);
+				write(1, ",   ", 4);
 			b++;
 		}
 		b = 0;
