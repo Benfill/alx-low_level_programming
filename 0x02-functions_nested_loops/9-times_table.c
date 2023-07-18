@@ -25,6 +25,8 @@ void	times_table(void)
 				_putchar(48 + result);
 			if (b < 9)
 				write(1, ", ", 2);
+			else if (result < 10)
+				write(1, ",  ", 3);
 			b++;
 		}
 		b = 0;
