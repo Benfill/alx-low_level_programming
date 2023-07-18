@@ -10,4 +10,4 @@ int print_sign(int n);
 int _abs(int);
 int print_last_digit(int);
 int add(int, int);
-times_table();
+void times_table(void);
