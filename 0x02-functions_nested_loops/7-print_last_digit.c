@@ -15,6 +15,6 @@ int	print_last_digit(int n)
 		d *= -1;
 	while (d > 10)
 		d %= 10;
-	putchar(48 + d);
+	write(1, 48 + d, 1)
 	return (d);
 }
