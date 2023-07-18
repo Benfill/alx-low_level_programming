@@ -8,6 +8,7 @@
 int	print_sign(int n)
 {
 	int	retValue;
+
 	if (n > 0)
 	{
 		write(1, "+", 1);
