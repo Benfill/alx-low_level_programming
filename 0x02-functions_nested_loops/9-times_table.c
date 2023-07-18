@@ -16,7 +16,7 @@ void	times_table(void)
 		while (b < 10)
 		{
 			result = a * b;
-			if (result > 10)
+			if (result >= 10)
 			{
 				_putchar(48 + result / 10);
 				_putchar(48 + result % 10);
