@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet - that print alphabet
- * Retirn: 0
+ * Return: void
  */
 void print_alphabet(void)
 {
@@ -11,9 +11,8 @@ void print_alphabet(void)
 	alpha = 'a';
 	while (alpha <= 'z')
 	{
-		_putchar(alpha);
+		putchar(alpha);
 		alpha++;
 	}
-	_putchar('\n');
-	return (0);
+	putchar('\n');
 }
