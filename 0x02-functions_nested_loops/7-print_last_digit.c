@@ -27,13 +27,3 @@ int	print_last_digit(int n)
 	write(1, &l, 1);
 	return (d);
 }
-
-int main(void)
-{
-	int r;
-
-	r = print_last_digit(-2147483648);
-	putchar('0' + r);
-	putchar('\n');
-	return (0);
-}
