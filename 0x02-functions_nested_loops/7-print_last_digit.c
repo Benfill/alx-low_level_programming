@@ -9,7 +9,7 @@
 int	print_last_digit(int n)
 {
 	int	d;
-	int	l;
+	char	l;
 
 	d = n;
 	if (d == -2147483648)
