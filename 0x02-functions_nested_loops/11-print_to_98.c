@@ -20,8 +20,8 @@ void	print_to_98(int n)
 			i = n;
 			while (i >= 10)
 			{
-				_putchar(48 + n / 10);
-				_putchar(48 + n % 10);
+				_putchar(48 + i / 10);
+				_putchar(48 + i % 10);
 				i /= 10;
 			}
 		}
