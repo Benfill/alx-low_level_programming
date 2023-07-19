@@ -34,8 +34,3 @@ void	times_table(void)
 		a++;
 	}
 }
-
-int	main()
-{
-	times_table();
-}
