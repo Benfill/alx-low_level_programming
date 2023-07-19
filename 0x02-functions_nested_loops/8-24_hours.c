@@ -19,13 +19,13 @@ void jack_bauer(void)
 		{
 			while (c < 6)
 			{
-				while(d < 10)
+				while (d < 10)
 				{
-					putchar(48 + a);
-					putchar(48 + b);
+					_putchar(48 + a);
+					_putchar(48 + b);
 					write(1, ":", 1);
-					putchar(48 + d);
-					putchar(48 + c);
+					_putchar(48 + d);
+					_putchar(48 + c);
 					write(1, "\n", 1);
 					d++;
 				}
