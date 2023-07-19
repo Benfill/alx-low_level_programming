@@ -22,11 +22,11 @@ void	times_table(void)
 				write(1, ",  ", 3);
 			if (result >= 10)
 			{
-				putchar(48 + result / 10);
-				putchar(48 + result % 10);
+				_putchar(48 + result / 10);
+				_putchar(48 + result % 10);
 			}
 			else
-				putchar(48 + result);
+				_putchar(48 + result);
 			b++;
 		}
 		b = 0;
