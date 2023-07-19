@@ -16,8 +16,12 @@ void	print_to_98(int n)
 			n++;
 		if (n >= 10)
 		{
-			_putchar(48 + n / 10);
-			_putchar(48 + n % 10);
+			while (n >= 10)
+			{
+				_putchar(48 + n / 10);
+				_putchar(48 + n % 10);
+		
+			}
 		}
 		else
 			_putchar(48 + n);
@@ -26,4 +30,5 @@ void	print_to_98(int n)
 		else
 			break;
 	}
+	write(1, "\n", 1);
 }
