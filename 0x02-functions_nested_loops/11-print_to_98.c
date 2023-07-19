@@ -12,7 +12,7 @@ void	print_to_98(int n)
 	{
 		if (n > 98)
 			n--;	
-		if else (n < 98)
+		else if (n < 98)
 			n++;
 		if (n >= 10)
 		{
