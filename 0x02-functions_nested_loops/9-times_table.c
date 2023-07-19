@@ -16,23 +16,26 @@ void	times_table(void)
 		while (b < 10)
 		{
 			result = a * b;
+			if (result >= 10 && b != 9)
+				write(1, ", ", 2);
+			else if (result < 10 && b != 9 && b != 9)
+				write(1, ",  ", 3);
 			if (result >= 10)
 			{
-				_putchar(48 + result / 10);
-				_putchar(48 + result % 10);
+				putchar(48 + result / 10);
+				putchar(48 + result % 10);
 			}
 			else
-				_putchar(48 + result);
-			if (b == 9)
-				break ;
-			if (result >= 10)
-				write(1, ", ", 2);
-			if (result < 10)
-				write(1, ",  ", 3);
+				putchar(48 + result);
 			b++;
 		}
 		b = 0;
 		write(1, "\n", 1);
 		a++;
 	}
+}
+
+int	main()
+{
+	times_table();
 }
