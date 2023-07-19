@@ -18,7 +18,7 @@ void	times_table(void)
 			result = a * b;
 			if (result >= 10)
 				write(1, ", ", 2);
-			else if (result < 10)
+			else if (result < 10 b != 0)
 				write(1, ",  ", 3);
 			if (result >= 10)
 			{
