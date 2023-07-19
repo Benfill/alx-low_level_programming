@@ -6,9 +6,24 @@
  * Return: void
  */
 
+int my_putnbr(int nb)
+{
+    unsigned int a;
+    if (nb < 0){
+        _putchar('-');
+        my_putnbr(-nb);
+    }
+    if (nb >= 10){
+	a = nb%10;
+	nb = nb/10;
+	my_putnbr(nb);
+	_putchar(48 + a);
+    }
+    return (0);
+}
+
 void	print_to_98(int n)
 {
-	int	i;
 	while (n <= 98 || n > 98)
 	{
 		if (n > 98)
@@ -16,15 +31,7 @@ void	print_to_98(int n)
 		else if (n < 98)
 			n++;
 		if (n >= 10)
-		{
-			i = n;
-			while (i >= 10)
-			{
-				_putchar(48 + i / 10);
-				_putchar(48 + i % 10);
-				i /= 10;
-			}
-		}
+			my_putnbr(n);
 		else
 			_putchar(48 + n);
 		if (n != 98)
