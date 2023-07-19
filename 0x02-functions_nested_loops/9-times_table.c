@@ -16,9 +16,9 @@ void	times_table(void)
 		while (b < 10)
 		{
 			result = a * b;
-			if (result >= 10 && b != 9)
+			if (result >= 10)
 				write(1, ", ", 2);
-			else if (result < 10 && b != 9 && b != 9)
+			else if (result < 10)
 				write(1, ",  ", 3);
 			if (result >= 10)
 			{
