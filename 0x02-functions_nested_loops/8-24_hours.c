@@ -15,7 +15,7 @@ void jack_bauer(void)
 	d = 0;
 	while (a < 3)
 	{
-		while (b < 4)
+		while (b < 10)
 		{
 			while (c < 6)
 			{
@@ -34,6 +34,8 @@ void jack_bauer(void)
 			}
 			c = 0;
 			b++;
+			if (a == 2 && b == 3)
+				break;
 		}
 		b = 0;
 		a++;
