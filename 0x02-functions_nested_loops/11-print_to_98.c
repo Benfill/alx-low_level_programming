@@ -23,5 +23,7 @@ void	print_to_98(int n)
 			_putchar(48 + n);
 		if (n != 98)
 			write(1, ", ", 2);
+		else
+			break;
 	}
 }
