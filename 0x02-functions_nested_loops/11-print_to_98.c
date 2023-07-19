@@ -26,7 +26,7 @@ int my_putnbr(int nb)
 
 void	print_to_98(int n)
 {
-	while (n <= 98 || n > 98)
+	while (n < 98 || n > 98)
 	{
 		if (n >= 10)
 			if (n < 100)
@@ -44,6 +44,11 @@ void	print_to_98(int n)
 			n--;
 		else if (n < 98)
 			n++;
+	}
+	if (n == 98)
+	{
+		_putchar(48 + n / 10);
+		_putchar(48 + n % 10);
 	}
 	write(1, "\n", 1);
 }
