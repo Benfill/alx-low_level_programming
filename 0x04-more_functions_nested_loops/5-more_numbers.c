@@ -17,11 +17,11 @@ void more_numbers(void)
 		{
 			if (nbr >= 10)
 			{
-				_putchar(48 + nbr / 10);
-				_putchar(48 + nbr % 10);
+				putchar(48 + nbr / 10);
+				putchar(48 + nbr % 10);
 			}
 			else
-				_putchar(48 + nbr);
+				putchar(48 + nbr);
 			nbr++;
 		}
 		nbr = 0;
