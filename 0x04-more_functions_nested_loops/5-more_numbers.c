@@ -11,9 +11,9 @@ void more_numbers(void)
 
 	i =	0;
 	nbr =	0;
-	while(i < 10)
+	while (i < 10)
 	{
-		while(nbr < 15)
+		while (nbr < 15)
 		{
 			if (nbr >= 10)
 			{
