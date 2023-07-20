@@ -20,7 +20,7 @@ int	main(void)
 		else if (nbr % 5 == 0)
 			printf("Buzz");
 		else
-			printf("%d ", nbr);
+			printf("%d", nbr);
 		if (nbr != 100)
 			putchar(' ');
 		nbr++;
