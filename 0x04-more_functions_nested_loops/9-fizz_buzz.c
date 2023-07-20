@@ -26,4 +26,5 @@ int	main(void)
 		nbr++;
 	}
 	putchar('\n');
+	return (0);
 }
