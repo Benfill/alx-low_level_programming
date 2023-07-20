@@ -17,20 +17,20 @@ void print_triangle(int size)
 	{
 		while (space > 0)
 		{
-			putchar(' ');
+			_putchar(' ');
 			space--;
 		}
 		i = h;
 		while (i > 0)
 		{
-			putchar('#');
+			_putchar('#');
 			i--;
 		}
-		putchar('\n');
+		_putchar('\n');
 		h++;
 		space = size - h;
 		j--;
 	}
 	if (size <= 0)
-		putchar('\n');
+		_putchar('\n');
 }
