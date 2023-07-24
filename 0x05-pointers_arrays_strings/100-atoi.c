@@ -32,8 +32,14 @@ int	_atoi(char *s)
 	{
 		while (s[i] >= '0' && s[i] <= '9')
 		{
-			if (s[i - 1]  == '-' || s[i - 1] == '+')
-				checker = 1;
+			if (base > INT_MAX / 10
+			|| (base == INT_MAX / 10 && str[i] - '0' > 7)) 
+			{
+				if (sign == 1)
+					return INT_MAX;
+				else
+					return INT_MIN;
+			}
 			digit = s[i] - 48;
 			sum = sum * 10 + digit;
 			i++;
@@ -42,7 +48,5 @@ int	_atoi(char *s)
 			break;
 		i++;
 	}
-	if (checker == 1)
-		sum *= sign;
-	return (sum);
+	return (sum * sign);
 }
