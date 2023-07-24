@@ -13,12 +13,10 @@ int	_atoi(char *s)
 	int	sum;
 	int	digit;
 	int	sign;
-	int	checker;
 
 	i =		0;
 	sum =		0;
 	sign =		1;
-	checker =	0;
 	while (s[i] == ' ')
 		i++;
 	while (s[i] == '-' || s[i] == '+')
