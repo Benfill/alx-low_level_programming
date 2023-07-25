@@ -12,6 +12,7 @@ int	main(void)
 {
 	int i = 0;
 	int randomizer = 0;
+	int N = 8;
 
 	srand((unsigned int)(time(NULL)));
 
