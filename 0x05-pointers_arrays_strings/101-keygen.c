@@ -13,14 +13,19 @@ int	main(void)
 	int i = 0;
 	int randomizer = 0;
 	int N = 8;
+	char numbers[];
+	char letter[];
+	char LETTER[];
+	char symbols[];
+	char password[8];
+	
 
 	srand((unsigned int)(time(NULL)));
 
-	char numbers[] = "0123456789";
-	char letter[] = "abcdefghijklmnoqprstuvwyzx";
-	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-	char symbols[] = "!@#$^&*?";
-	char password[8];
+	numbers[] = "0123456789";
+	letter[] = "abcdefghijklmnoqprstuvwyzx";
+	LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+	symbols[] = "!@#$^&*?";;
 
 	randomizer = rand() % 4;
 	for (i = 0; i < N; i++)
@@ -48,5 +53,6 @@ int	main(void)
 			password[i] = letter[rand() % 26];
 			randomizer = rand() % 4;
 		}
+		return (0);
 	}
 }
