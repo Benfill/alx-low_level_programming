@@ -42,6 +42,7 @@ int	main(void)
 			password[i] = letter[rand() % 26];
 			randomizer = rand() % 4;
 		}
+		printf("%s", password);
 	}
 	return (0);
 }
