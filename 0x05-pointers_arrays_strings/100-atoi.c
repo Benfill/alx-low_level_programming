@@ -17,13 +17,11 @@ int	_atoi(char *s)
 	i =		0;
 	sum =		0;
 	sign =		1;
-	while (s[i] == ' ' || s[i] == '+')
+	while (s[i] == ' ')
 		i++;
 	while (s[i] == '-' || s[i] == '+')
 	{
-		if (s[i] == '+')
-			sign *= +1;
-		else
+		if (s[i] == '-')
 			sign *= -1;
 		i++;
 	}
