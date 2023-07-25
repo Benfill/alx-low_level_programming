@@ -26,19 +26,16 @@ int	main(void)
 		{
 			password[i] = numbers[rand() % 10];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
 		}
 		else if (randomizer == 2)
 		{
 			password[i] = symbols[rand() % 8];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
 		}
 		else if (randomizer == 3)
 		{
 			password[i] = LETTER[rand() % 26];
 			randomizer = rand() % 4;
-			printf("%c", password[i]);
 		}
 		else
 		{
