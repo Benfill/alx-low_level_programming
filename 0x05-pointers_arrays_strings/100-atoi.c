@@ -17,9 +17,7 @@ int	_atoi(char *s)
 	i =		0;
 	sum =		0;
 	sign =		1;
-	while (s[i] == ' ')
-		i++;
-	while (s[i] == '-' || s[i] == '+')
+	while (s[i] == '-' || s[i] == '+' || s[i] == ' ')
 	{
 		if (s[i] == '-')
 			sign *= -1;
@@ -27,6 +25,8 @@ int	_atoi(char *s)
 	}
 	while (s[i])
 	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+			sign = 1;
 		while (s[i] >= '0' && s[i] <= '9')
 		{
 			if (sum > INT_MAX / 10
