@@ -13,11 +13,11 @@ int	main(void)
 	int i = 0;
 	int randomizer = 0;
 	int N = 8;
-	char numbers[10];
-	char letter[26];
-	char LETTER[26];
-	char symbols[8];
-	char password[8];
+	char *numbers;
+	char *letter;
+	char *LETTER;
+	char *symbols;
+	char *password;
 	
 
 	srand((unsigned int)(time(NULL)));
