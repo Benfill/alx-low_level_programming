@@ -13,19 +13,19 @@ int	main(void)
 	int i = 0;
 	int randomizer = 0;
 	int N = 8;
-	char numbers[];
-	char letter[];
-	char LETTER[];
-	char symbols[];
+	char numbers[10];
+	char letter[26];
+	char LETTER[26];
+	char symbols[8];
 	char password[8];
 	
 
 	srand((unsigned int)(time(NULL)));
 
-	numbers[] = "0123456789";
-	letter[] = "abcdefghijklmnoqprstuvwyzx";
-	LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-	symbols[] = "!@#$^&*?";;
+	numbers[10] = "0123456789";
+	letter[26] = "abcdefghijklmnoqprstuvwyzx";
+	LETTER[26] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+	symbols[8] = "!@#$^&*?";;
 
 	randomizer = rand() % 4;
 	for (i = 0; i < N; i++)
