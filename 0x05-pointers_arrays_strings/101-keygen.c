@@ -17,6 +17,7 @@ int	main(void)
 	char letter[] = "abcdefghijklmnoqprstuvwyzx";
 	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 	char symbols[] = "!@#$^&*?";
+	char password[N];
 
 	randomizer = rand() % 4;
 	for (i = 0; i < N; i++)
