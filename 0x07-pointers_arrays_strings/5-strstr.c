@@ -21,13 +21,11 @@ char	*_strstr(char *haystack, char *needle)
 		tmp = i;
 		while (needle[j] != '\0' && needle[j] == haystack[i])
 		{
-			printf("%d\n", j);
 			j++;
 			i++;
 		}
 		if (needle[j] == '\0')
 		{
-			printf("zbi");
 			return (&haystack[tmp]);
 		}
 		j = 0;
