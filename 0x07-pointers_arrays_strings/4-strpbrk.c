@@ -11,28 +11,21 @@ char	*_strpbrk(char *s, char *accept)
 {
 	int	i;
 	int	j;
-	int	on;
-	char	*str = NULL;
 
 	i =	0;
 	j =	0;
-	on =	0;
 	while (s[i])
 	{
 		while (accept[j])
 		{
 			if (s[i] == accept[j])
 			{
-				on = 1;
-				str = &s[i];
-				break;
+				return (&s[i]);
 			}
 			j++;
 		}
 		j = 0;
-		if (on == 1)
-			break;
 		i++;
 	}
-	return (str);
+	return (NULL);
 }
