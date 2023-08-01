@@ -12,7 +12,7 @@ void	print_diagsums(int *a, int size)
 	int	i;
 	int	res;
 	int	res2;
-	int	(*c)[size] = (int (*)[size])a;
+	int	(*c)[100] = (int (*)[100])a;
 
 	i =	0;
 	res =	0;
