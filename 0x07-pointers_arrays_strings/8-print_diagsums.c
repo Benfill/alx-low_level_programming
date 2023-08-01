@@ -12,15 +12,14 @@ void	print_diagsums(int *a, int size)
 	int	i;
 	int	res;
 	int	res2;
-	int	(*c)[100] = (int (*)[100])a;
 
 	i =	0;
 	res =	0;
 	res2 =	0;
 	while (i < size)
 	{
-		res += c[i][i];
-		res2 += c[i][size - i - 1];
+		res += a[i * size + i];
+		res2 += a[i * size + (size - i - 1)];
 		i++;
 	}
 	printf("%d, %d\n", res, res2);
