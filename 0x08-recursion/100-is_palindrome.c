@@ -38,9 +38,9 @@ int	is_palindrome_recursive(char *s, int start, int end)
 
 int is_palindrome(char *s)
 {
-	if (s == NULL)
-		return (0);
 	int len = _strlen_recursion(s);
 
+	if (s == NULL)
+		return (0);
 	return (is_palindrome_recursive(s, 0, len - 1));
 }
