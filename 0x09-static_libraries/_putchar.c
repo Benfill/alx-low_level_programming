@@ -5,7 +5,7 @@
  * @c: the character
  * Return: 0
  */
-int	putchar(int c)
+int	_putchar(char c)
 {
-	return (write(1, "_putchar\n", 9));
+	return (write(1, &c, 1));
 }
