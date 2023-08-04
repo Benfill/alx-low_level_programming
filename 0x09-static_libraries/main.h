@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
-void _putchar(char c);
+int _putchar(int c);
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);

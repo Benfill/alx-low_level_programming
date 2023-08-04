@@ -2,10 +2,10 @@
 
 /**
  * main - programme prints _putchar
+ * @c: the character
  * Return: 0
  */
-int	main(void)
+int	putchar(int c)
 {
-	write(1, "_putchar\n", 9);
-	return (0);
+	return (write(1, "_putchar\n", 9));
 }
