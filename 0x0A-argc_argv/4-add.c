@@ -71,10 +71,13 @@ int     main(int argc, char **argv)
         res = 0;
         i = 1;
         if (argc == 1)
+        {
                 write (1, "0\n", 2);
+                return;
+        }
         while (i < argc)
         {
-            nbr = _atoi(*argv[i]);
+            nbr = _atoi(argv[i]);
             if (nbr == -33)
             {
                 write(1, "Error\n", 6);
