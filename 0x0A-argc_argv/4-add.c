@@ -30,31 +30,24 @@ void	print_number(int n)
 
 int     _atoi(char *s)
 {
-        int     i;
-        int     sum;
-        int     digit;
-        int     sign;
+	int	i;
+	int	sum;
+	int	digit;
 
-        i =             0;
-        sum =           0;
-        sign =          1;
-        if (s[i] == '-' || (s[i] >= 'a' && s[i] <= 'z'))
-            return (-33);
-        else if (!(s[i] >= '0' && s[i] <= '9'))
-            return (-33);
-        while (s[i])
-        {
-                while (s[i] >= '0' && s[i] <= '9')
-                {
-                        digit = s[i] - 48;
-                        sum = sum * 10 + digit;
-                        i++;
-                }
-                if (sum > 0)
-                        break;
-                i++;
-        }
-        return (sum * sign);
+	i =	0;
+	sum =	0;
+	while (s[i])
+	{
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - 48;
+			sum = sum * 10 + digit;
+			i++;
+		}
+		else
+			return (-33);
+	}
+	return (sum);
 }
 
 /**
@@ -66,27 +59,28 @@ int     _atoi(char *s)
 
 int     main(int argc, char **argv)
 {
-        int nbr, res, i;
+	int nbr, res, i;
 
-        res = 0;
-        i = 1;
-        if (argc == 1)
-        {
-                write (1, "0\n", 2);
-                return (0);
-        }
-        while (i < argc)
-        {
-            nbr = _atoi(argv[i]);
-            if (nbr == -33)
-            {
-                write(1, "Error\n", 6);
-                return (0);
-            }
-            res += nbr;
-            i++;
-        }
-        print_number(nbr);
-        putchar('\n');
-        return (0);
+	res = 0;
+	i = 1;
+	if (argc == 1)
+	{
+		write(1, "0\n", 2);
+		return (0);
+	}
+	while (i < argc)
+	{
+		nbr = _atoi(argv[i]);
+		printf("zbi%d\n", nbr);
+		if (nbr == -33)
+		{
+			write(1, "Error\n", 6);
+			return (0);
+		}
+		res += nbr;
+		i++;
+	}
+	print_number(res);
+	putchar('\n');
+	return (0);
 }

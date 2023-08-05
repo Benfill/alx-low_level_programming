@@ -12,7 +12,6 @@ int	main(int argc, char **argv)
 
 	if (argc >= 0)
 		putchar(47 + argc);
-	if (**argv)
-		putchar('\n');
+	(void)**argv;
 	return (0);
 }
