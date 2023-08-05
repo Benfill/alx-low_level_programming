@@ -71,7 +71,6 @@ int     main(int argc, char **argv)
 	while (i < argc)
 	{
 		nbr = _atoi(argv[i]);
-		printf("zbi%d\n", nbr);
 		if (nbr == -33)
 		{
 			write(1, "Error\n", 6);
