@@ -50,6 +50,12 @@ void	print_number(int n)
 		putchar(48 + n);
 }
 
+/**
+ * main - program adds positive numbers
+ * @argc: the number of args
+ * @argv: array of arguments
+ * Return: 0 and 1 if there less or more than 3 args
+ */
 
 int	main(int argc, char **argv)
 {
