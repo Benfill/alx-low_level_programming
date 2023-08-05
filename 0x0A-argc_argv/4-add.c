@@ -73,7 +73,7 @@ int     main(int argc, char **argv)
         if (argc == 1)
         {
                 write (1, "0\n", 2);
-                return;
+                return (0);
         }
         while (i < argc)
         {
@@ -81,7 +81,7 @@ int     main(int argc, char **argv)
             if (nbr == -33)
             {
                 write(1, "Error\n", 6);
-                return;
+                return (0);
             }
             res += nbr;
             i++;
