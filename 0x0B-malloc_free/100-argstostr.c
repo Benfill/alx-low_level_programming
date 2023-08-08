@@ -33,7 +33,7 @@ char	*argstostr(int ac, char **av)
 	int	size;
 	char	*p;
 
-	i = 1;
+	i = 0;
 	j = 0;
 	h = 0;
 	size = 0;
@@ -47,7 +47,7 @@ char	*argstostr(int ac, char **av)
 	p = (char *) malloc(size + ac - 1);
 	if (!p)
 		return (NULL);
-	i = 1;
+	i = 0;
 	while (i < ac)
 	{
 		while (av[i][j])
