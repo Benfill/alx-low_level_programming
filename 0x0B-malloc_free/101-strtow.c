@@ -105,7 +105,6 @@ char	**strtow(char *str)
 			if (!p[i])
 				return (NULL);
 			p[i] = s;
-			free(s);
 			i++;
 		}
 		j += word_len;
