@@ -82,7 +82,7 @@ char	**strtow(char *str)
 
 	i =		0;
 	j =		0;
-	if (str[0] == ' ' && str[1] == '\0')
+	if (str[0] == ' ' && !str[1])
 		return (NULL);
 	if (str[0] == '\0')
 		return (NULL);
