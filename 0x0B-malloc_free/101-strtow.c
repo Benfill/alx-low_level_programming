@@ -101,7 +101,7 @@ char	**strtow(char *str)
 		if (word_len > 0)
 		{
 			s = my_strdup(&str[j], word_len);
-			p[i] = (char *)malloc(word_len + 1);
+			p[i] = (char *)malloc(word_len);
 			if (!p[i])
 				return (NULL);
 			p[i] = s;
