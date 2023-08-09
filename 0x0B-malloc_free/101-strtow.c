@@ -90,7 +90,7 @@ char	**strtow(char *str)
 	if (str[0] == '\0')
 		return (NULL);
 	counter =	_wordCounter(str);
-	p = (char **) malloc(sizeof(char *) * counter + 1);
+	p = (char **) malloc(sizeof(char *) * (counter + 1));
 	if (!p)
 		return (NULL);
 	while (i < counter)
