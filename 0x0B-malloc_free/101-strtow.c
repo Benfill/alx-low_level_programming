@@ -90,7 +90,7 @@ char	**strtow(char *str)
 	if (str[0] == '\0')
 		return (NULL);
 	counter =	_wordCounter(str);
-	p = (char **) malloc(sizeof(char *) * (counter + 1));
+	p = (char **) malloc(sizeof(char *) * counter + 1);
 	if (!p)
 		return (NULL);
 	while (i < counter)
@@ -101,10 +101,11 @@ char	**strtow(char *str)
 		if (word_len > 0)
 		{
 			s = my_strdup(&str[j], word_len);
-			p[i] = (char *)malloc(word_len);
+			p[i] = (char *) malloc(word_len + 1);
 			if (!p[i])
 				return (NULL);
 			p[i] = s;
+			free(s);
 			i++;
 		}
 		j += word_len;
