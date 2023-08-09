@@ -82,8 +82,11 @@ char	**strtow(char *str)
 
 	i =		0;
 	j =		0;
-	if (str[0] == ' ' && !str[1])
+	while (str[i] == ' ' && str[i] != '\0')
+		i++;
+	if (str[i] == '\0')
 		return (NULL);
+	i = 0;
 	if (str[0] == '\0')
 		return (NULL);
 	counter =	_wordCounter(str);
