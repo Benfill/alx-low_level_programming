@@ -3,20 +3,20 @@
 /**
  * _memset - function fills memory with constant byte
  * @s: a pointer to the string
- * @b: constant byte
+ * @c: constant byte
  * @n: number of byte
  * Return: a pointer to the string
  */
 
-char	*_memset(char *s, char b, unsigned int n)
+void	*_memset(void *s, int c, size_t n)
 {
-	unsigned int	i;
+	unsigned char *p = s;
 
-	i =	0;
-	while (i < n)
+	while (n > 0)
 	{
-		s[i] = b;
-		i++;
+		*p = (unsigned char)c;
+		p++;
+		n--;
 	}
 	return (s);
 }
