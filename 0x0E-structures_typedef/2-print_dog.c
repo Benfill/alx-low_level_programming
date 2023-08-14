@@ -8,7 +8,7 @@
 
 void	print_dog(struct dog *d)
 {
-	int	i = strlen(d->owner);
+	unsigned int	i = strlen(d->owner);
 
 	if (d == NULL)
 		return;
