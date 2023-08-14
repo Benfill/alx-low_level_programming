@@ -9,6 +9,7 @@
 void	print_dog(struct dog *d)
 {
 	int	i = strlen(d->owner);
+
 	if (d == NULL)
 		return;
 	if (d->name == NULL)
