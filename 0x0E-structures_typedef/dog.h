@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <strings.h>
 
 /**
  * struct dog - dog infos
