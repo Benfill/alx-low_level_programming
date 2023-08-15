@@ -12,9 +12,7 @@ int	_strlen(char *s)
 
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -36,11 +34,11 @@ void	print_dog(struct dog *d)
 	else
 		printf("Name: %s\n", d->name);
 	if (!d->age)
-		printf("(nil)\n");
+		printf("Age: (nil)\n");
 	else
 		printf("Age: %.6f\n", d->age);
 	if (i > 0)
 		printf("Owner: %s\n", d->owner);
 	else
-		printf("(nil)\n");
+		printf("Owner: (nil)\n");
 }
