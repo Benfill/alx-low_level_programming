@@ -27,7 +27,7 @@ int	_strlen(char *s)
 void	print_dog(struct dog *d)
 {
 	int	i;
-	
+
 	i = _strlen(d->owner);
 	if (d == NULL)
 		return;
