@@ -55,10 +55,8 @@ char	*_strdup(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *p;
+	dog_t *p = NULL;
 
-	if (p == NULL)
-		return (NULL);
 	p->name = _strdup(name);
 	p->age = age;
 	p->owner = _strdup(owner);
