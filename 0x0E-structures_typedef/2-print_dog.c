@@ -22,11 +22,3 @@ void	print_dog(struct dog *d)
 	else
 		printf("Owner: %s\n", d->owner);
 }
-
-int main(void)
-{
-    struct dog my_dog;
-
-    print_dog(&my_dog);
-    return (0);
-}
