@@ -3,14 +3,11 @@
 /**
  * print_dog - function prints dog's infos
  * @d: pointer to struct dog
- * Return: void
  */
 
 void	print_dog(struct dog *d)
 {
 	if (d == NULL)
-		return;
-	if (d->name == NULL && d->owner == NULL && !d->age)
 		return;
 	if (d->name == NULL)
 		write(1, "Name: (nil)\n", 12);
