@@ -9,7 +9,7 @@ void	print_dog(struct dog *d)
 {
 	if (d == NULL)
 		return;
-	if (d->name == NULL && d->age == 0 && d->owner[0] == '\0')
+	if (d->name == NULL && d->age == 0 && d->owner[0] == '\0' && d->owner == NULL)
 		return;
 	if (d->name == NULL)
 		write(1, "Name: (nil)\n", 12);
