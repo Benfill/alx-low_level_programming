@@ -9,6 +9,8 @@ void	print_dog(struct dog *d)
 {
 	if (d == NULL)
 		return;
+	if ((*d).name == NULL || (*d).owner == NULL)
+		return;
 	if (d->name == NULL)
 		write(1, "Name: (nil)\n", 12);
 	else
