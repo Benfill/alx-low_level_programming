@@ -46,14 +46,3 @@ void	print_dog(struct dog *d)
 	else
 		write(1, "Owner: (nil)\n", 13);
 }
-
-int main(void)
-{
-    struct dog my_dog;
-
-
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    print_dog(&my_dog);
-    return (0);
-}
