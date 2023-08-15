@@ -1,49 +1,24 @@
 #include	"dog.h"
 
 /**
- * _strlen - function that counts the lenght of a string
- * @s: the string
- * Return: the length of s
+ * _strcpy - function copies the string pointed by src to dest
+ * @dest: the pointer to destination
+ * @src: the pointer of source
+ * Return: the dest pointer
  */
 
-int	_strlen(char *s)
+char	*_strcpy(char *dest, char *src)
 {
 	int	i;
 
-	i = 0;
-	while (s[i])
+	i =	0;
+	while (src[i])
 	{
+		dest[i] = src[i];
 		i++;
 	}
-	return (i);
-}
-
-/**
- * _strdup - function that returns a pointer to a newly allocated space
- * in memory, which contains a copy of the string given as a parameter
- * @str: the string to be copied
- * Return: a pointer to the duplicated string. It returns NULL if
- * insufficient memory was available
- */
-
-char	*_strdup(char *str)
-{
-	int	i;
-	char	*p;
-
-	i = 0;
-	if (str == NULL)
-		return (NULL);
-	p = (char *) malloc(_strlen(str) + 1);
-	if (p == NULL)
-		return (NULL);
-	while (str[i])
-	{
-		p[i] = str[i];
-		i++;
-	}
-	p[i] = '\0';
-	return (p);
+	dest[i] = '\0';
+	return (dest);
 }
 
 /**
@@ -57,10 +32,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *p = NULL;
 
-	p->name = _strdup(name);
+	_strcpy(p->name, name);
 	p->age = age;
-	p->owner = _strdup(owner);
+	p->owner = _strcpy(p->owner, owner);
 	if (p->name == NULL || p->owner == NULL)
 		return (NULL);
-	return (dog_t);
+	return (p);
 }
