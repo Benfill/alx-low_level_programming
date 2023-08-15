@@ -34,15 +34,26 @@ void	print_dog(struct dog *d)
 	if (d->name == NULL && i == 0 && !d->age)
 		return;
 	if (d->name == NULL)
-		printf("Name: (nil)\n");
+		write(1, "Name: (nil)\n", 12);
 	else
 		printf("Name: %s\n", d->name);
 	if (d->age == 0)
-		printf("Age: (nil)\n");
+		write(1, "Age: (nil)\n", 11);
 	else
 		printf("Age: %.6f\n", d->age);
 	if (i > 0)
 		printf("Owner: %s\n", d->owner);
 	else
-		printf("Owner: (nil)");
+		write(1, "Owner: (nil)\n", 13);
+}
+
+int main(void)
+{
+    struct dog my_dog;
+
+
+    my_dog.age = 3.5;
+    my_dog.owner = "Bob";
+    print_dog(&my_dog);
+    return (0);
 }
