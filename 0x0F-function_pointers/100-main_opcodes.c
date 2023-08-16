@@ -34,4 +34,5 @@ int	main(int ac, char **av)
 		}
 		printf("%02hhx ", opcode[i++]);
 	}
+	return (0);
 }
