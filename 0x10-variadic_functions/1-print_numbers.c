@@ -13,6 +13,7 @@ void	print_numbers(const char *separator, const unsigned int n, ...)
 	int		nbr;
 	va_list		p;
 
+
 	va_start(p, n);
 	for (i = 0; i < n; i++)
 	{
@@ -22,5 +23,6 @@ void	print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%d%s", nbr, separator);
 	}
+	va_end(p);
 	putchar('\n');
 }
