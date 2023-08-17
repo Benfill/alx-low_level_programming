@@ -41,9 +41,11 @@ void	print_all(const char * const format, ...)
 			if (!str)
 				str = "(nil)";
 			printf("%s", str);
+			break;
+
 			default:
 			i++;
-			break;
+			continue;
 		}
 		i++;
 	}
