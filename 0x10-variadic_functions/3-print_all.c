@@ -8,14 +8,13 @@
 
 void	print_all(const char * const format, ...)
 {
-	int	i;
+	int	i = 0;
 	char	c;
 	float	f;
 	int	integer;
 	char	*str;
 	va_list	p;
 
-	i = 0;
 	va_start(p, format);
 	while (format != NULL && format[i])
 	{
@@ -25,24 +24,20 @@ void	print_all(const char * const format, ...)
 			integer	= va_arg(p, int);
 			printf("%i", integer);
 			break;
-
 			case 'c':
 			c = va_arg(p, int);
 			printf("%c", c);
 			break;
-
 			case 'f':
 			f = va_arg(p, double);
 			printf("%f", f);
 			break;
-
 			case 's':
 			str = va_arg(p, char *);
 			if (!str)
 				str = "(nil)";
 			printf("%s", str);
 			break;
-
 			default:
 			i++;
 			continue;
