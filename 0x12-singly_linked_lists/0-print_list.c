@@ -13,9 +13,7 @@ size_t	print_list(const list_t *h)
 
 	next_N = malloc(sizeof(list_t));
 	if (next_N == NULL)
-	{
-		return (-1);
-	}
+		return (0);
 	next_N = h;
 	while (next_N != NULL)
 	{
