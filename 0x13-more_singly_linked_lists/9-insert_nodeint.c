@@ -1,6 +1,26 @@
 #include	"lists.h"
 
 /**
+ * listint_len - function that returns the number of elements
+ * in a linked listint_t list
+ * @h: the head of the list
+ * Return: the number of nodes in the list
+ */
+
+size_t listint_len(const listint_t *h)
+{
+	size_t	counter;
+
+	counter = 0;
+	while (h != NULL)
+	{
+		h = h->next;
+		counter++;
+	}
+	return (counter);
+}
+
+/**
  * insert_nodeint_at_index -  function that inserts a new node
  * at a given position
  * @head: pointer to the head
@@ -14,11 +34,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t	*new;
 	listint_t	*actual;
 	listint_t	*past;
+	listint_t	*p;
 	unsigned int	count;
+	unsigned int	i;
 
 	if (*head == NULL)
 		return (NULL);
 	count = 0;
+	p = *head;
+	i = listint_len(*head);
+	*head = p;
+	if (i < idx)
+		return (NULL);
 	new = malloc(sizeof(listint_t));
 	if (!new)
 		return (NULL);
