@@ -67,11 +67,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		if (actual == NULL && count + 2 != idx)
 		{
 			free(new);
-		}
 			break;
+		}
 		past = actual;
 		actual = actual->next;
 		count++;
 	}
+	free(new);
 	return (NULL);
 }
