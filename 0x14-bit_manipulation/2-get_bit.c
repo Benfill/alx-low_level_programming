@@ -10,7 +10,10 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int	sum;
+	int numBits = sizeof(n) * 8;
 
+	if (index >= numBits)
+        	return -1;
 	sum = (n >> index) & 1;
 	return (sum);
 }
