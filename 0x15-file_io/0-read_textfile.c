@@ -17,10 +17,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buff = malloc(letters + 1);
 	if (!buff || n == -1 || filename == NULL)
+	{
+		close(n);
 		return (0);
+	}
 	tmp = read(n, buff, letters);
 	if (tmp == -1)
+	{
+		free(buff);
 		return (0);
+	}
 	buff[letters] = '\0';
 	close(n);
 	while (i < letters)
