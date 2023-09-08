@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buff = malloc(letters + 1);
 	if (!buff)
 		return (0);
-	(n == -1 || filename == NULL)
+	if (n == -1 || filename == NULL)
 	{
 		free(buff);
 		close(n);
