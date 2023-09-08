@@ -19,5 +19,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read(n, buff, letters);
 	buff[letters + 1] = '\0';
 	close(n);
-	return (printf("%s", buff));
+	return (write(1, buff, letters));
 }
