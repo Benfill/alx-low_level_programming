@@ -76,7 +76,6 @@ int	main(int ac, char **av)
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		free(buff);
 		exit(97);
 	}
 	file_from = av[1];
