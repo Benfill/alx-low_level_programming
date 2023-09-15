@@ -41,7 +41,7 @@ int	main(int ac, char **av)
 		exit(98);
 	}
 	byte_readed = read(fd_from, buff, 1024);
-	buff[byte_readed + 1] = '\0';
+	buff[byte_readed] = '\0';
 	fd_to = open(file_to, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	tmp = write(fd_to, buff, _strlen(buff));
 	if (tmp == -1 || fd_to == -1)
