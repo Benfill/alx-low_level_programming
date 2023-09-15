@@ -80,7 +80,7 @@ int	main(int ac, char **av)
 	}
 	file_from = av[1];
 	file_to = av[2];
-	fd_from = open(file_from, O_RDWR);
+	fd_from = open(file_from, O_RDONLY);
 	buff = create_buff(file_to);
 	byte_readed = read(fd_from, buff, 1024);
 	if (fd_from == -1 || byte_readed == -1)
