@@ -82,16 +82,16 @@ int	main(int ac, char **av)
 	file_to = av[2];
 	fd_from = open(file_from, O_RDWR);
 	buff = create_buff(file_to);
-	if (fd_from == -1)
+	byte_readed = read(fd_from, buff, 1024);
+	if (fd_from == -1 || byte_readed == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		free(buff);
 		close(fd_from);
 		exit(98);
 	}
-	byte_readed = read(fd_from, buff, 1024);
 	buff[byte_readed] = '\0';
-	fd_to = open(file_to, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	tmp = write(fd_to, buff, _strlen(buff));
 	if (tmp == -1 || fd_to == -1)
 	{
