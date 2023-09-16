@@ -12,7 +12,24 @@ int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 void print_elf(const Elf64_Ehdr *header);
 
-
+/**
+ * struct Elf64_Ehdr - ELF header structure for 64-bit ELF files
+ *
+ * @e_ident:   ELF identification bytes and format information
+ * @e_type:    Type of the ELF file (e.g., ET_EXEC for executable)
+ * @e_machine: Target architecture (e.g., EM_X86_64 for x86_64)
+ * @e_version: ELF format version (usually 1 for current)
+ * @e_entry:   Entry point virtual address for executables
+ * @e_phoff:   Offset to the program header table in the file
+ * @e_shoff:   Offset to the section header table in the file
+ * @e_flags:   Processor-specific flags
+ * @e_ehsize:  Size of this ELF header (in bytes)
+ * @e_phentsize: Size of a program header table entry (in bytes)
+ * @e_phnum:   Number of entries in the program header table
+ * @e_shentsize: Size of a section header table entry (in bytes)
+ * @e_shnum:   Number of entries in the section header table
+ * @e_shstrndx: Index of the section header containing section names
+ */
 
 typedef struct
 {
