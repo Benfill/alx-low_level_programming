@@ -1,10 +1,31 @@
 #include <fcntl.h>
 #include <elf.h>
 
+/**
+ * exit_with_error - Exits the program with an error code
+ * and prints an error message.
+ * @code: The exit code to use.
+ * @message: The error message format string.
+ * @arg1: The first argument to substitute in the error message (can be NULL).
+ * @fd: The file descriptor to close (-1 if not applicable).
+ */
+
 void print_error(const char *msg) {
     fprintf(stderr, "%s\n", msg);
     exit(98);
 }
+
+/**
+ * print_elf_header - Prints the ELF header information.
+ * @header: A pointer to the ELF header structure.
+ */
+
+/**
+ * main - The entry point of the program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings containing the command-line arguments.
+ * Return: The exit status of the program.
+ */
 
 void print_elf_header(const Elf64_Ehdr *header) {
     printf("ELF Header:\n");
