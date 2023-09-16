@@ -6,14 +6,8 @@
 #include <fcntl.h>
 #include <strings.h>
 
-void	_putchar(char c);
-ssize_t read_textfile(const char *filename, size_t letters);
-int create_file(const char *filename, char *text_content);
-int append_text_to_file(const char *filename, char *text_content);
-void print_elf(const Elf64_Ehdr *header);
-
 /**
- * struct Elf64_Ehdr - ELF header structure for 64-bit ELF files
+ * struct header - ELF header structure for 64-bit ELF files
  *
  * @e_ident:   ELF identification bytes and format information
  * @e_type:    Type of the ELF file (e.g., ET_EXEC for executable)
@@ -31,7 +25,7 @@ void print_elf(const Elf64_Ehdr *header);
  * @e_shstrndx: Index of the section header containing section names
  */
 
-typedef struct
+typedef struct header
 {
 	unsigned char e_ident[EI_NIDENT];
 	Elf64_Half e_type;
@@ -48,5 +42,11 @@ typedef struct
 	Elf64_Half e_shnum;
 	Elf64_Half e_shstrndx;
 } Elf64_Ehdr;
+
+void	_putchar(char c);
+ssize_t read_textfile(const char *filename, size_t letters);
+int create_file(const char *filename, char *text_content);
+int append_text_to_file(const char *filename, char *text_content);
+void print_elf(const Elf64_Ehdr *header);
 
 #endif
