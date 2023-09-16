@@ -20,13 +20,6 @@ void print_error(const char *msg) {
  * @header: A pointer to the ELF header structure.
  */
 
-/**
- * main - The entry point of the program.
- * @argc: The number of command-line arguments.
- * @argv: An array of strings containing the command-line arguments.
- * Return: The exit status of the program.
- */
-
 void print_elf_header(const Elf64_Ehdr *header) {
     printf("ELF Header:\n");
     printf("  Magic:   ");
@@ -92,6 +85,13 @@ void print_elf_header(const Elf64_Ehdr *header) {
     }
     printf("  Entry point address:               0x%lx\n", header->e_entry);
 }
+
+/**
+ * main - The entry point of the program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings containing the command-line arguments.
+ * Return: The exit status of the program.
+ */
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
