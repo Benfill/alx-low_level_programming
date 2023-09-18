@@ -20,9 +20,11 @@ void print_error(const char *msg)
 
 void print_elf_header(const Elf64_Ehdr *header)
 {
+	int	i;
+
 	printf("ELF Header:\n");
 	printf("  Magic:   ");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 		printf("%02x ", header->e_ident[i]);
 	printf("\n");
 	printf("  Class:                             ");
@@ -112,13 +114,12 @@ int main(int argc, char *argv[])
 {
 	const char *filename = argv[1];
 	int fd = open(filename, O_RDONLY);
+	Elf64_Ehdr header;
 
 	if (argc != 2)
 		print_error("Usage: elf_header elf_filename");
 	if (fd == -1)
 		print_error("Error opening file");
-	Elf64_Ehdr header;
-
 	if (read(fd, &header, sizeof(header)) != sizeof(header))
 		print_error("Error reading ELF header");
 	if (header.e_ident[EI_MAG0] != ELFMAG0 ||
