@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <strings.h>
+#include <elf.h>
 
 /**
  * struct header - ELF header structure for 64-bit ELF files
@@ -25,7 +26,7 @@
  * @e_shstrndx: Index of the section header containing section names
  */
 
-typedef struct header
+/*typedef struct header
 {
 	unsigned char e_ident[EI_NIDENT];
 	Elf64_Half e_type;
@@ -41,7 +42,7 @@ typedef struct header
 	Elf64_Half e_shentsize;
 	Elf64_Half e_shnum;
 	Elf64_Half e_shstrndx;
-} Elf64_Ehdr;
+} Elf64_Ehdr;*/
 
 void	_putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
